@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.22.1)
 
 project(queue_tee_pie)
 
@@ -15,7 +15,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-add_executable(hello_test tests/hello_test.cpp src/hello.cpp)
-add_executable(main main.cpp src/hello.cpp)
+add_executable(QueueTees_test tests/QueueTees_test.cpp src/QueueTees.cpp src/Kitty.cpp src/Puppy.cpp src/PygmyMarmoset.cpp)
+add_executable(main main.cpp src/QueueTees.cpp src/Kitty.cpp src/Puppy.cpp src/PygmyMarmoset.cpp)
 
-target_link_libraries(hello_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(QueueTees_test PRIVATE Catch2::Catch2WithMain)
